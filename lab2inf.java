@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class lab2inf {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        int numb = in.nextInt();// BigDecimal
+        int numb = in.nextInt();
         final int a[] = new int [7];
         for (int i = 0; i < 7; ++i){
             a[i] = numb % 10;
