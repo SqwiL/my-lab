@@ -1,0 +1,25 @@
+package com.mylab.main.Item;
+
+import com.mylab.main.Interface.InterfaceSmelling;
+import com.mylab.main.Person.Person;
+import com.mylab.main.Enum.Smell;
+
+public class Powder extends Item implements InterfaceSmelling {
+    public Powder(String name){
+        super(name);
+    }
+    @Override
+    public void smell(Person person) {
+        if(person.getName() == "Скуперфильд"){
+            belongs(person);
+            System.out.println(" пахнет " + Smell.DRAGS.getSmell());
+        }
+        else{
+            belongs(person);
+            System.out.println(" пахнет " + Smell.TIDE.getSmell());
+        }
+    }
+    public void flyUp(){
+        System.out.println(getName() + " взлетел вверх. ");
+    }
+}
